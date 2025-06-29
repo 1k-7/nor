@@ -600,8 +600,6 @@ async def cb_handler(client: Client, query: CallbackQuery):
 
     elif query.data == "start":
         buttons = [[
-            InlineKeyboardButton("+ ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ +", url=f'http://t.me/{temp.U_NAME}?startgroup=start')
-        ],[
             InlineKeyboardButton('𝗨𝗣𝗗𝗔𝗧𝗘𝗦', url=UPDATES_LINK),
             InlineKeyboardButton('𝗦𝗨𝗣𝗣𝗢𝗥𝗧', url=SUPPORT_LINK)
         ],[
@@ -621,7 +619,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         ],[
             InlineKeyboardButton('𝗼𝘄𝗻𝗲𝗿', callback_data='owner')
         ],[
-            InlineKeyboardButton('𝘀𝘁𝗮𝗿𝘁', callback_data='start')
+            InlineKeyboardButton('<< 𝗯𝗮𝗰𝗸', callback_data='start')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await query.edit_message_media(
