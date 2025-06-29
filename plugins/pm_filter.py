@@ -606,7 +606,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InlineKeyboardButton('𝗦𝗨𝗣𝗣𝗢𝗥𝗧', url=SUPPORT_LINK)
         ],[
             InlineKeyboardButton('𝗛𝗘𝗟𝗣', callback_data='help'),
-            InlineKeyboardButton('𝗜𝗡𝗟𝗜𝗡𝗘', switch_inline_query_current_chat=''),
+            InlineKeyboardButton('𝗜𝗡𝗟𝗜𝗡𝗘', switch_inline_query_current_chat='')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await query.edit_message_media(
