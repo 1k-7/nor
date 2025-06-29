@@ -33,10 +33,8 @@ async def pm_search(client, message):
     else:
         files, n_offset, total = await get_search_results(message.text)
         btn = [[
-            InlineKeyboardButton("🗂 ᴄʟɪᴄᴋ ʜᴇʀᴇ 🗂", url=FILMS_LINK)
-        ],[
-            InlineKeyboardButton('🤑 Buy Premium', url=f"https://t.me/{temp.U_NAME}?start=premium")
-            ]]
+            InlineKeyboardButton("𝗙𝗜𝗟𝗠𝗦 𝗟𝗜𝗡𝗞𝗦", url=FILMS_LINK)
+        ]]
         reply_markup=InlineKeyboardMarkup(btn)
         if int(total) != 0:
             await message.reply_text(f'<b><i>🤗 ᴛᴏᴛᴀʟ <code>{total}</code> ʀᴇꜱᴜʟᴛꜱ ꜰᴏᴜɴᴅ ɪɴ ᴛʜɪꜱ ɢʀᴏᴜᴘ 👇</i></b>\n\nor buy premium subscription', reply_markup=reply_markup)
@@ -192,7 +190,7 @@ async def next_page(bot, query):
             ]
         )
     btn.append(
-        [InlineKeyboardButton('🤑 Buy Premium', url=f"https://t.me/{temp.U_NAME}?start=premium")]
+        [InlineKeyboardButton('𝗕𝗨𝗬 𝗣𝗥𝗘𝗠𝗜𝗨𝗠', url=f"https://t.me/{temp.U_NAME}?start=premium")]
     )
     await query.message.edit_text(cap + files_link + del_msg, reply_markup=InlineKeyboardMarkup(btn), disable_web_page_preview=True, parse_mode=enums.ParseMode.HTML)
 
@@ -604,14 +602,11 @@ async def cb_handler(client: Client, query: CallbackQuery):
         buttons = [[
             InlineKeyboardButton("+ ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ +", url=f'http://t.me/{temp.U_NAME}?startgroup=start')
         ],[
-            InlineKeyboardButton('ℹ️ ᴜᴘᴅᴀᴛᴇs', url=UPDATES_LINK),
-            InlineKeyboardButton('🧑‍💻 ꜱᴜᴘᴘᴏʀᴛ', url=SUPPORT_LINK)
+            InlineKeyboardButton('𝗨𝗣𝗗𝗔𝗧𝗘𝗦', url=UPDATES_LINK),
+            InlineKeyboardButton('𝗦𝗨𝗣𝗣𝗢𝗥𝗧', url=SUPPORT_LINK)
         ],[
-            InlineKeyboardButton('👨‍🚒 ʜᴇʟᴘ', callback_data='help'),
-            InlineKeyboardButton('🔎 ɪɴʟɪɴᴇ', switch_inline_query_current_chat=''),
-            InlineKeyboardButton('📚 ᴀʙᴏᴜᴛ', callback_data='about')
-        ],[
-            InlineKeyboardButton('🤑 Buy Premium', url=f"https://t.me/{temp.U_NAME}?start=premium")
+            InlineKeyboardButton('𝗛𝗘𝗟𝗣', callback_data='help'),
+            InlineKeyboardButton('𝗜𝗡𝗟𝗜𝗡𝗘', switch_inline_query_current_chat=''),
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await query.edit_message_media(
@@ -621,12 +616,12 @@ async def cb_handler(client: Client, query: CallbackQuery):
         
     elif query.data == "about":
         buttons = [[
-            InlineKeyboardButton('📊 sᴛᴀᴛᴜs 📊', callback_data='stats'),
-            InlineKeyboardButton('🤖 sᴏᴜʀᴄᴇ ᴄᴏᴅᴇ 🤖', callback_data='source')
+            InlineKeyboardButton('𝘀𝘁𝗮𝘁𝘀', callback_data='stats'),
+            InlineKeyboardButton('𝘀𝗼𝘂𝗿𝗰𝗲', callback_data='source')
         ],[
-            InlineKeyboardButton('🧑‍💻 ʙᴏᴛ ᴏᴡɴᴇʀ 🧑‍💻', callback_data='owner')
+            InlineKeyboardButton('𝗼𝘄𝗻𝗲𝗿', callback_data='owner')
         ],[
-            InlineKeyboardButton('« ʙᴀᴄᴋ', callback_data='start')
+            InlineKeyboardButton('𝘀𝘁𝗮𝗿𝘁', callback_data='start')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await query.edit_message_media(
