@@ -598,7 +598,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
 
 
 
-    elif query.data == "start":
+    elif query.data == "back":
         buttons = [[
             InlineKeyboardButton('𝗨𝗣𝗗𝗔𝗧𝗘𝗦', url=UPDATES_LINK),
             InlineKeyboardButton('𝗦𝗨𝗣𝗣𝗢𝗥𝗧', url=SUPPORT_LINK)
@@ -619,7 +619,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         ],[
             InlineKeyboardButton('𝗼𝘄𝗻𝗲𝗿', callback_data='owner')
         ],[
-            InlineKeyboardButton('<< 𝗯𝗮𝗰𝗸', callback_data='start')
+            InlineKeyboardButton('<< 𝗯𝗮𝗰𝗸', callback_data='back')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await query.edit_message_media(
@@ -665,7 +665,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InlineKeyboardButton('User Command', callback_data='user_command'),
             InlineKeyboardButton('Admin Command', callback_data='admin_command')
         ],[
-            InlineKeyboardButton('« ʙᴀᴄᴋ', callback_data='start')
+            InlineKeyboardButton('<< 𝗯𝗮𝗰𝗸', callback_data='back')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await query.edit_message_media(
@@ -675,7 +675,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
 
     elif query.data == "user_command":
         buttons = [[
-            InlineKeyboardButton('« ʙᴀᴄᴋ', callback_data='help')
+            InlineKeyboardButton('<< 𝗯𝗮𝗰𝗸', callback_data='help')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await query.edit_message_media(
@@ -687,7 +687,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         if query.from_user.id not in ADMINS:
             return await query.answer("ADMINS Only!", show_alert=True)
         buttons = [[
-            InlineKeyboardButton('« ʙᴀᴄᴋ', callback_data='help')
+            InlineKeyboardButton('<< 𝗯𝗮𝗰𝗸', callback_data='help')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await query.edit_message_media(
@@ -697,7 +697,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
 
     elif query.data == "source":
         buttons = [[
-            InlineKeyboardButton('≼ ʙᴀᴄᴋ', callback_data='about')
+            InlineKeyboardButton('<< 𝗯𝗮𝗰𝗸', callback_data='about')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await query.edit_message_media(
