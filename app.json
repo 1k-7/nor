@@ -1,7 +1,7 @@
 {
-    "name": "Auto Filter Bot",
-    "description": "A Telegram bot for auto-filtering movies.",
-    "repository": "https://github.com/HA-Bots/Auto-Filter-Bot",
+    "name": "norSearchBot",
+    "description": "Bot (Telegram) for indexing and fetching movies.",
+    "repository": "private",
     "keywords": ["telegram", "bot", "filter", "automation"],
     "buildpacks": [
       {
