@@ -1,6 +1,6 @@
 class script(object):
 
-    START_TXT = """<b>Hey {}, <i>{}</i>
+    START_TXT = """<b>Hey {},
     
 Movie Indexing Bot brought to you by @norFederation</b>"""
 
