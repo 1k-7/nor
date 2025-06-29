@@ -2,7 +2,7 @@
     "name": "norSearchBot",
     "description": "Bot (Telegram) for indexing and fetching movies.",
     "repository": "private",
-    "keywords": ["telegram", "bot", "filter", "automation"],
+    "keywords": ["telegram", "bot", "automation"],
     "buildpacks": [
       {
         "url": "heroku/python"
